@@ -1,0 +1,69 @@
+body {
+    background: #FFF;
+    color: #fff; }
+  
+  .navbar {
+    border-bottom: #008ed6 3px solid;
+    opacity: 0.8; }
+  
+    .nav-link{
+  
+      font-size: 14px;
+      text-transform: uppercase;
+      padding-left: 1em !important;
+      padding-right: 1em !important ;
+      
+  
+    }
+    .nav-item.active{
+  
+      border-left: #444 3px solid;
+  
+  
+    }
+    .carousel-item{
+  
+      height:450px;
+    }
+    .carousel-image-1{
+  
+  
+      background: url(../images/joshua-earle-wFWQmOyfkkM-unsplash.jpg);
+      background-size:1300px;
+  
+    }
+    .carousel-image-2{
+  
+  
+      background: url(../images/melissa-AWh9C-QjhE4-unsplash.jpg);
+      background-size:1000px;
+    }
+    .carousel-image-3{
+  
+      background: url(../images/dion-tavenier-h-Qb-9H6Big-unsplash.jpg);
+      background-size:1000px;
+  
+    }
+  
+    .fa{
+      font-size: 55px;;
+    }
+    #home-heading{
+      background: url(../css/olga-stalska-0lq_UCD1ZMw-unsplash.jpg);
+      position: relative;
+      min-height: 200px;
+      text-align:center;
+      background-repeat: no;
+      background-size: cover;
+    }
+    .dark-overlay{
+  
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+  
+  
+    }
