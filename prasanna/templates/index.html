@@ -26,16 +26,15 @@
 		  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
-		  <a href="index.html" class="navbar-brand">journey</a>
+		  <a href="/" class="navbar-brand">journey</a>
 		  <div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav ml-auto">
 				<div>
 				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 				</div>
-
 				{% if user.is_authenticated %}
 				<div>
-				<li class="nav-item" ><lead>hello ,{{user.username}}</lead> </li>	</div>
+				<li class="nav-item" ><lead> <h5 class="text-white mt-2">Hello {{user.username}} </h5></lead> </li>	</div>
 				<div>
 				<li class=" nav-item" > <a  class="nav-link" href="accounts/findbus">findbus</a></li>
 				</div>

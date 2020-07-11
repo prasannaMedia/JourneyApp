@@ -7,7 +7,6 @@ from django.core.files import File
 
 
 # Create your views here.
-
 def login(request):
         if request.method=='POST':
             username=request.POST['username']
@@ -42,9 +41,6 @@ def findbus(request):
     else:
         return render(request, 'findbus.html')
 
-
-
-
 def bookings(request):
     context = {}
     if request.method == 'POST':
@@ -58,7 +54,7 @@ def bookings(request):
             if  int(bus.rem) >= seats_r:
                 # print('inside 2nd if')
                 name_r = bus.bus_name
-                cost_r = int(seats_r) * bus.price
+                cost = int(seats_r) * bus.price
                 source_r = bus.source
                 dest_r = bus.dest
                 nos_r =bus.nos
@@ -71,10 +67,9 @@ def bookings(request):
                 rem_r =int( bus.rem) - seats_r
                 print(rem_r)
                 Bus.objects.filter(id=id_r).update(rem=rem_r)
-                book= Book.objects.create(name=username_r, email=email_r, userid=userid_r, bus_name=name_r,
-                                           source=source_r, busid=id_r,cost=cost_r,
-                                           dest=dest_r, price=price_r, nos=seats_r, date=date_r, time=time_r,
-                                           )
+                book = Book.objects.create(name=username_r, email=email_r, userid=userid_r, bus_name=name_r,
+                                           source=source_r, busid=id_r,
+                                           dest=dest_r, price=price_r, nos=seats_r, date=date_r, time=time_r)
                 print('------------Book id-----------', book.id)
 
 
@@ -86,8 +81,6 @@ def bookings(request):
         else:
                 return render(request, 'findbus.html')
 
-    
-
 def  register(request):
 
     if request.method=='POST':
@@ -97,7 +90,6 @@ def  register(request):
         password1=request.POST['password1']
         password2=request.POST['password2']
         email=request.POST['email']
-
 
         if password1==password2:
 
@@ -114,7 +106,6 @@ def  register(request):
                     print("user created")
                     return redirect('/')
         else:
-              
               messages.info(request,'password is not matching')
               return redirect('register')
     else:
